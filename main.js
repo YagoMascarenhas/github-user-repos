@@ -17,6 +17,7 @@ buttonElement.onclick = function() {
     var userName = inputElement.value;
 
     inputElement.value = ""
+    inputElement.placeholder = "Digite um nome de usuário..."
 
     axios.get("https://api.github.com/users/" + userName + "/repos?per_page=1000")
     .then(function(response){
